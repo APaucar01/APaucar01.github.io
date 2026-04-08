@@ -1,82 +1,161 @@
-# APaucar01.github.io
+<!DOCTYPE html>
 <html data-qb-installed="true">
 <head>
-    <script type="text/javascript" src="APaucar01.github.io"></script>
     <meta charset="utf-8">
     <title>Valentine</title>
     <style>
-        body{background-color:#ffe8ea; text-align:center;font-family: system-ui, -apple-system, BlinkMacSystemFont,
-             "Segoe UI", "Apple Color Emoji",
-             "Segoe UI Emoji", "Noto Color Emoji", sans-serif;}
-        h1{color:#E02787;}
-        .image{display:flex;justify-content:center;margin-top:20px;}
-        #img-chat{max-width:400px;width:100%;height:auto;}
-        .bouton{background-color:#fba5c5;border-radius:5px;font-size:20px;padding: 10px 20px;}
-        .bouton:hover{background-color:hotpink;font-size:30px;}
-        .secret{background-color:#fba5c5;padding:40px;margin:40px auto;max-width:600px;font-size:18px;line-height:1.6;border-radius:15px;text-align:left;}
-        .enveloppe{font-size:40px;}
+        body {
+            background-color: #abf7b1; 
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 { color: #228B22; }
+        
+        .bouton {
+            background-color: #00c04b;
+            color: black;
+            border-radius: 5px;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            font-weight: bold;
+        }
+        
+        .bouton:hover {
+            background-color: hotpink;
+            transform: scale(1.05);         }
+        
+        .secret {
+            background-color: #00c04b;
+            color: black;            padding: 40px;
+            margin: 40px auto 20px auto;
+            max-width: 600px;
+            font-size: 18px;
+            line-height: 1.6;
+            border-radius: 15px;
+            text-align: left;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .enveloppe { font-size: 60px; }
+        
+        .step-container { display: none; }
     </style>
 </head>
 
 <body data-scholarcy-content-script-executed="1">
 
-    <!-- Image first -->
-    <div class="image">
-        <img id="img-chat" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExODBzY214bDQwZ2NjemFkeXpwNHg2aWFzcmR2cHhjdWN0ODQ5cDE1bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D9j761FH8SYJLyW9WO/giphy.gif">
+    <h1> My Way Of Showing I Love You </h1>
+    <h2 id="mot">Thank you for clicking on this my love :)</h2>
+
+<img src="DSC00229.jpg"
+     alt="Us"
+     style="max-width:50%;height:auto;">
+
+    <div class="step-container" id="step1" style="display: block;">
+        <div class="secret">
+            <strong>Dear Audrey,</strong><br>
+            <small>Coucou Audrey,</small><br><br>
+            
+            <strong>I may not be the best with words or decisive actions, but I will always show effort.</strong><br>
+            <small>Je ne suis tres bien avec mon mots, mais je le serai toujours montrer effort. </small>
+        </div>
+        <button class="bouton" onclick="nextStep(1)">CONTINUE....</button> 
     </div>
 
-    <!-- Heading -->
-    <h1> 🎀 HELLO THERE 🎀 </h1>
-    <h2 id="mot">Yay !! I LOVE YOU so much 💖</h2>
+    <div class="step-container" id="step2">
+        <div class="secret">
+            <strong>I meant when I said I wanted to try something with you because I definitely see something coming from this. </strong><br>
+            <small>Je vouloir faire quand j'ai dit je voudrais essayer avec toi parceque je vois sans aucun doute quelque chose se profiler (hard translation)  </small><br><br>
 
-    <!-- ----- LOOP START ----- -->
-    <!-- Repeat this block as many times as you like -->
-    <div class="secret" id="secret1">
-        <!-- Bold English line, then smaller French line, then newline -->
-        <strong>XXXXXXX</strong><br>
-        <small>yyyyyyy</small><br><br>
+            <strong>The reason I think you are so perfect is because there isn't a single thing I dont love about you... </strong><br>
+            <small> Le raison je pense qui tu est le person parfait pour moi ist parceque il n'y a rien que je n'aime pas...  </small>
+        </div>
+        <button class="bouton" onclick="nextStep(2)">CONTINUE</button> 
     </div>
-    <div>
-        <button class="bouton" onclick="changeImage('YES')">YES</button> 
-        &nbsp;&nbsp;
-        <button class="bouton" onclick="changeImage('NO')">NO</button>
-    </div>
-    <br>
 
-    <!-- Second copy of the block (you can add more copies) -->
-    <div class="secret" id="secret2">
-        <strong>XXXXXXX</strong><br>
-        <small>yyyyyyy</small><br><br>
-    </div>
-    <div>
-        <button class="bouton" onclick="changeImage('YES')">YES</button> 
-        &nbsp;&nbsp;
-        <button class="bouton" onclick="changeImage('NO')">NO</button>
-    </div>
-    <br>
-    <!-- ----- LOOP END ----- -->
+    <div class="step-container" id="step3">
+        <div class="secret">
+            <strong>I love your laugh, your personality towards people, your resilience, your humour, your wittiness. I love your fears, your stories, your interests, and all your likes. </strong><br>
+            <small>Je adore ton rire, ton personnalite envers les persons, ton tenacite, ton humour, ton espirit. Je adore ton craindre, ton histoire, ton passe-temps, et tout de ton aimes. </small><br><br>
 
-    <div><span class="enveloppe">💌</span></div>
+            <strong>Particularly, I love the way you make me feel. You make me feel loved, safe, relaxed. You make me feel like I can stay in the moment with you forever and forget about everything else </strong><br>
+            <small> Particulierement, je adore comme tu me faire sentir. Tu me fair sentire adored, tout a fait sur, et detendu. Tu me fair comme je peux rester dans le momentavec toi pour toujours et oublier a propos de tout   </small>
+        </div>
+        <button class="bouton" onclick="nextStep(3)">CONTINUE</button> 
+    </div>
+
+    <div class="step-container" id="step4">
+        <div class="secret">
+            <strong>My love, there is absolutely nothing about you that I would change. In my eyes you are perfect and I love you.  </strong><br>
+            <small>Mon amour, il n'y a absolument rien de toi qui je vouldrais alterer. Dans mon eyeux tu est perfect et je t'aime.  </small><br><br>
+
+            <strong>I want to keep you always. If you just give me a chance I promise you I know what to do better this time around. I never thought people would be perfect for each other, I always believed people can change to better adapt for another. I hope I dont have to, but for you I would change 100 times if it meant I could love you better. </strong><br>
+            <small> Je voudrais garder de toi - toujours. Si vous donner moi un chance, je promesse que je sais comment fair mieux cette fois. Je n'aurais jamais que personness promenait parfair pour se, je toujours croire que personnes pouvoir changer pour mieux s'adapter pour l'autre. Je esperer que je ne aurai pas a la faire, mais pour toi je me adapter 100 fois si ce signifait que je pourrait t'aimer mieux. </small>
+        </div>
+        <button class="bouton" onclick="nextStep(4)">CONTINUE</button> 
+    </div>
+
+    <div class="step-container" id="step5">
+        <div class="secret">
+            <strong>I miss you and I don't want to give up.  </strong><br>
+            <small>Je te manque et je ne voudrais abandonner de toi.  </small><br><br>
+
+            <strong>I want to make many more memories with you and only you!</strong><br>
+            <small> Je voudrais construire beacouop dememoire avec toi et seulemet toi! </small>
+        </div>
+        <button class="bouton" onclick="nextStep(5)">FINISH</button> 
+    </div>
+
+    <div class="step-container" id="step6">
+        <div class="secret">
+            <strong>So my love, I am so sorry for everything I have put you through.   </strong><br>
+            <small>Donc mon amour, je suis tres desolee pour tout que je te fait passser pas. </small><br><br>
+
+            <strong>Through all the lies and my actions. I will never make a repeat of this and I can more than confidently pinky promise you something this serious. </strong><br>
+            <small> A traver tout mon mensonge et mon action. Je ne ferai jamais un repeter of this et je peux dire que je promesse du petit doight a propos de ceci serieux.  </small>
+        </div>
+        <button class="bouton" onclick="nextStep(5)">FINISH</button> 
+    </div>
+
+   <div class="step-container" id="step7">
+        <div class="secret">
+            <strong>I miss you and I don't want to give up.  </strong><br>
+            <small>Je te manque et je ne voudrais abandonner de toi.  </small><br><br>
+
+            <strong>I know the french is terrible but I thought it best to try anyways with word reference and not use AI.</strong><br>
+            <small> Je sais que mon Francais c'est terrible mais je pense que c'est mieux que je tenter avec WordReference et pas fair de le IA. </small>
+        </div>
+        <button class="bouton" onclick="nextStep(5)">FINISH</button> 
+    </div>
+
+    <div id="final-envelope" style="display: none; margin-top: 40px;">
+        <span class="enveloppe">💌</span>
+    </div>
 
     <script>
-        function changeImage(choice) {
-            const img=document.getElementById('img-chat');
-            const mot=document.getElementById('mot');
-            // Update the *first* secret box for demo; you could target others similarly
-            const secret=document.getElementById('secret1');
-            if(choice=='YES') {
-                img.src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExODBzY214bDQwZ2NjemFkeXpwNHg2aWFzcmR2cHhjdWN0ODQ5cDE1bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D9j761FH8SYJLyW9WO/giphy.gif";
-                mot.textContent = "Yay !! I LOVE YOU so much 💖";
-                secret.innerHTML = "<strong>XXXXXXX</strong><br><small>yyyyyyy</small><br><br>";
-            } else if(choice=='NO') {
-                img.src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2hvb213aTJuYXBvYmVwdDZsNjhidTExbnRra2V5ZTRvMDNwYzU5MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9KI8vyCCAOqHbcMYd2/giphy.gif";
-                mot.textContent = "Are you sure.... ??";
-                secret.textContent = ">:(((";
+        function nextStep(currentStepNumber) {
+            document.getElementById('step' + currentStepNumber).style.display = 'none';
+            
+            let nextStepNumber = currentStepNumber + 1;
+            let nextStepElement = document.getElementById('step' + nextStepNumber);
+            
+            if (nextStepElement) {
+                nextStepElement.style.display = 'block';
+            } else {
+                document.getElementById('final-envelope').style.display = 'block';
             }
         }
     </script>
 
-    <!-- Placeholder from original code (kept as-is) -->
     <pvx-mtcvlzjkuhjc></pvx-mtcvlzjkuhjc>
+<img src="IMG_0271.PNG"
+     alt="Spotify"
+     style="max-width:50%;height:auto;">
 </body>
 </html>
